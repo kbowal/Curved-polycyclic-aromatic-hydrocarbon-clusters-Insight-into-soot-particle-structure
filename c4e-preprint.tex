@@ -1,0 +1,108 @@
+\documentclass[como,a4paper,12pt,final]{Classes/c4e-preprint}
+\graphicspath{{Figures/}}
+
+%--------------------------------------------------------------------
+%    LaTeX includes
+%--------------------------------------------------------------------
+% Note subfig is now deprecated.
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{xspace}
+
+%--------------------------------------------------------------------
+%    pdf properties (must be consistent with title page data below)
+%--------------------------------------------------------------------
+\hypersetup{
+  pdftitle={Structure and properties of curved polycyclic aromatic hydrocarbon nanoclusters},
+  pdfauthor={Kimberly Bowal\affiliated{1}, Laura Pascazio\affiliated{1}, Jacob W. Martin\affiliated{1,2}, Markus Kraft\affiliated{1,2,3}}
+  pdfsubject={c4e preprint template},
+  pdfkeywords={c4e, preprint, template}
+  }
+
+\begin{document}
+%--------------------------------------------------------------------
+%    title page (must be consistent with pdf properties above)
+%--------------------------------------------------------------------
+\title{Structure and properties of curved polycyclic aromatic hydrocarbon nanoclusters}
+\author{Kimberly Bowal\affiliated{1}, Laura Pascazio\affiliated{1}, Jacob W. Martin\affiliated{1,2}, Markus Kraft\affiliated{1,2,3}}
+\keywords{force field, curved polycyclic aromatic hydrocarbon, flexoelectric dipole, ion-induced nucleation, soot formation}
+\nopreprint{XXX} \nopreyear{2019} \releasedate{XXX}
+
+\affiliation{1}{
+  Department of Chemical Engineering \\and Biotechnology\\
+  University of Cambridge\\
+  West Site, Philippa Fawcett Drive\\
+  Cambridge, CB3 0AS\\
+  United Kingdom\\
+E-mail: \href{mailto:mk306@cam.ac.uk}{mk306@cam.ac.uk}}
+  
+\affiliation{2}{
+  Cambridge Centre for Advanced Research\\
+  and Education in Singapore (CARES)\\
+  CREATE Tower, 1 Create Way\\
+  Singapore, 138602}
+
+\affiliation{3}{
+  School of Chemical and\\ Biomedical Engineering\\
+  Nanyang Technological University\\
+  62 Nanyang Drive\\
+  Singapore, 637459}
+
+
+
+\maketitle
+
+%--------------------------------------------------------------------
+%     abstract
+%--------------------------------------------------------------------
+\begin{abstract}
+Understanding the formation and properties of soot particles is critical for the accurate description of turbulent reacting flows within combustion. Due to the small time and length scale of these particle dynamics, a complete description of soot particle properties has remained a challenge. Curved polycyclic aromatic hydrocarbons (cPAHs) have been identified as key constituents of soot particles and we have recently shown that their interactions with ions may contribute significantly to particle formation (Bowal, K, et al. “Ion-induced soot nucleation using a new potential for curved aromatics”, Combustion Science and Technology (2018, accepted)). The structural properties of cPAH clusters are unknown and further molecular modelling studies are required to provide insight into the clustering behaviour of cPAHs - their size-dependent arrangements, interactions with planar PAHs, and assembly around ions.
+
+\end{abstract}
+
+%%\begin{figure}[!ht]
+%%    \setlength{\figwidth}{12cm}
+%%    \centering
+%%    \resizebox*{\figwidth}{!}{\includegraphics{GraphicalAbstract.pdf}}
+%%\end{figure}
+
+\textbf{Highlights:}
+\begin{itemize}
+\item item 1
+\item item 2
+\end{itemize}
+
+\vfill
+
+%--------------------------------------------------------------------
+%     table of contents
+%--------------------------------------------------------------------
+\clearpage \setcounter{tocdepth}{3} \tableofcontents
+
+%--------------------------------------------------------------------
+%     paper body
+%--------------------------------------------------------------------
+\clearpage
+%use input{} to include the body of the preprint
+\input{c4e-preprint-example.tex}
+
+%--------------------------------------------------------------------
+%     appendices
+%--------------------------------------------------------------------
+\clearpage \appendix
+\numberwithin{equation}{section}
+\input{c4e-preprint-supplementaryinfo.tex}
+
+%--------------------------------------------------------------------
+%     bibliography
+%--------------------------------------------------------------------
+\clearpage \citeindexfalse
+\bibliography{c4e-preprint-bibliography}    %Create bibliography
+%GATHER{c4e-preprint-bibliography.bib}      %Get WinEdt data
+
+%--------------------------------------------------------------------
+%     citation index
+%--------------------------------------------------------------------
+%\clearpage \makeciteindex
+
+\end{document}

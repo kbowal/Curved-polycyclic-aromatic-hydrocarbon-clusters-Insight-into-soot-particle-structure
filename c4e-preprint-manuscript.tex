@@ -2,22 +2,33 @@
 %
 \section{Introduction}
 \label{sec:Introduction}
-% 
-%% Curved carbons are found in porous carbons, glassy carbons, soot, etc
+% Answering: What is the energy/structure of cPAH particles? How does this differ from fPAH particles? What is the influence of molecule size, proportion, and presence of ions or fPAHs?
 
-%% Curvature is caused by non-hexagonal rings, causes special steric and electronic properties
+%% Curved carbons are everywhere...
+Curved carbons are found in porous carbons, glassy carbons, soot, etc
+% even important in small proportions since seem to interrupt formation of mesophase...
+% Mesophase pitch is used to produce many materials, including synthetic graphite.
 
-%% Curved carbons have great promise in many applications such as understanding particulates, novel nanocarbon materials, batteries, drug delivery, sensors, gas storage, etc
-Preliminary simulations show that cluster arrangment of curved corannulene is different than planar coronene (Preprint 214). This may be more representative of the experimentally observed structure of nascent soot particles.
+It has been suggested that the presence of curved PAH molecules prevents graphitisation, since curvature diminishes the anisotropy which provides reduced connectivity in lower (1 and 2) dimensions. In other words, curvature disrupts formation of the mesophase.
 
-Further areas of interest include: arrangement of curved and planar PAH clusters, structure of cPAH clusters containing ion(s)
+We know that the integration of curvature in molecules is crucial in determining whether a combusted wood-based material produces graphitic or non-graphitised carbon (not oxygen as also hypothesised) (Abrahamson, Joseph P., et al. "Carbon structure and the resulting graphitizability upon oxygen evolution." Carbon 135 (2018): 171-179).
 
-The structural properties of cPAH clusters are unknown and further molecular modelling studies are required to provide insight into the clustering behaviour of cPAHs - their size-dependent arrangements, interactions with planar PAHs, and assembly around ions.
+Curved aromatics seem to form fullerenes and then ribbons and net-negative structures (Abrahamson, Joseph, et al. "Trajectories of graphitizable anthracene coke and non-graphitizable sucrose char during the earliest stages of annealing by rapid CO2 laser heating." C 4.2 (2018): 36; Jake's papers).
 
-Understanding non-covalent interactions with and between curved carbon nanostructures has importance in many systems and great potential for numerous applications.
 
-Motivation: structure of soot particles / interstellar medium, applications such as electronics, nanomedicine, energy, etc
+% Curvature is caused by... (incl experimental refs)
+Curvature is caused by the presence of non-hexagonal rings within a hexagonal lattice. This causes special steric and electronic properties...
 
+% Arrangement of atoms determines everything...
+The arrangement of atoms in a carbon material determines its structure and properties and function. This nanostructure is crucial to understand the existing and potential behaviour of carbon materials. For example, to understand (how to optimise) structure's stability/longevity, environmental interactions, ability to store other molecules -- all important for gas storage or sequestration applications.  Similar questions about the detailed structure of the material are asked for other applications such as batteries, adsorbents, involving thermal protection, conductivity.
+Need to know this in order to optimise the nanostructures for these applications.
+
+%% curved carbon applications...
+Curved carbons have great promise in many applications such as understanding particulates, novel nanocarbon materials, batteries, drug delivery, sensors, gas storage, etc
+
+Applications: Lithium ion batteries, electronics, fuel cells
+
+% from Carbon website: "Relevant application areas for carbon materials include, but are not limited to: biology and medicine; catalysis; electronic, optoelectronic, spintronic, high-frequency, and photonic devices; energy storage and conversion systems; environmental applications and water treatment; smart materials and systems; and, structural and thermal applications."
 
 
 %% Previous work looking at cPAH interactions:	Homogeneous dimers
@@ -50,46 +61,49 @@ Homodimers are weaker than heterodimers because they don't take advantage of bow
 
 Thus we hypothesise that heterogeneous cPAH clusters may be more stable than their heterogeneous fPAH counterparts since different sizes of cPAHs may provide stable packing arrangements.
 
+%% previous work on cPAH nucleation
+Preliminary simulations show that cluster arrangment of curved corannulene is different than planar coronene (Preprint 214). This may be more representative of the experimentally observed structure of nascent soot particles.
 
-%% Limitations: mostly static DFT calculations, no information about nanoparticles. 
+
+Further areas of interest include: arrangement of curved and planar PAH clusters, structure of cPAH clusters containing ion(s)
+
+The structural properties of cPAH clusters are unknown and further molecular modelling studies are required to provide insight into the clustering behaviour of cPAHs - their size-dependent arrangements, interactions with planar PAHs, and assembly around ions.
+
+Understanding non-covalent interactions with and between curved carbon nanostructures has importance in many systems and great potential for numerous applications.
+
+Motivation: structure of soot particles / interstellar medium, applications such as electronics, nanomedicine, energy, etc
 
 
-
-%% Following previous work looking at heterogeneous fPAHs…
+%% Previous work looking at heterogeneous fPAHs…
 Previous work examined heterogeneous PAH clusters using replica exchange molecular dynamics (ref)...
 
-%% 
+%% Limitations of existing work
+To date, detailed studies of cPAHs have primarily included static DFT calculations or crystal structure experiments, neither of which provide information about intermolecular dynamics and particle nanostructure.
+
+
+We should note that in this work, the terms (nano)particle and cluster are effectively synonymous: a nanoparticle is made up of a cluster of molecules.
+
+
+%% purpose of this work... 
 The purpose of this work is to explore properties (molecular arrangements, melting points, densities, surface properties, etc) of clusters containing curved PAHs.  
+
+In this work, we are motivated to understand the influence of cPAHs in soot particle structure and stability, but these results have general relevance to nanoparticles containing cPAHs regardless of source or application.
 
 Hypothesis: cPAH clusters are more representative of the experimentally observed structure of nascent soot particles, heterogeneous cPAH clusters are significant since they are stable than their fPAH counterparts.
 
 This is important for better understanding of soot particle formation and growth, and has implications for other carbon nanomaterials such as batteries, imaging probes, gas storage, optoelectronics, and targeted nanomedicine.
 
+%in this work...
+We will address these questions in this work by studying nanoparticle systems containing cPAHs, first in homogeneous clusters containing one molecule type only, then extending this to heterogeneous clusters to understand the interactions and effect of cPAH size and ratio. Finally, exploratory work on systems containing cation(s) and fPAHs is presented.
+
 %question: do curved PAHs partition within clusters the same way fPAHs do?
 %question: Are curved PAH clusters more stable than fPAH clusters? Predict long-range dipole-dipole interactions increase stability.
 
 
-
-%%%%%%%%%%%%%%%%%%% Other thoughts of how to approach %%%%%%%%%%%%%%%%%%%
-The arrangement of atoms in a carbon material determines its structure and properties and function. This nanostructure is crucial to understand the existing and potential behaviour of carbon materials. For example, to understand (how to optimise) structure's stability/longevity, environmental interactions, ability to store other molecules -- all important for gas storage or sequestration applications.  Similar questions about the detailed structure of the material are asked for other applications such as batteries, adsorbents, involving thermal protection, conductivity.
-Need to know this in order to optimise the nanostructures for these applications.
-
-Applications: Lithium ion batteries, electronics, fuel cells
-
-Mesophase pitch is used to produce many materials, including synthetic graphite.
-It has been suggested that the presence of curved PAH molecules prevents graphitisation, since curvature diminishes the anisotropy which provides reduced connectivity in lower (1 and 2) dimensions. In other words, curvature disrupts formation of the mesophase.
-
-We know that the integration of curvature in molecules is crucial in determining whether a combusted wood-based material produces graphitic or non-graphitised carbon (not oxygen as also hypothesised) (Abrahamson, Joseph P., et al. "Carbon structure and the resulting graphitizability upon oxygen evolution." Carbon 135 (2018): 171-179).
-
-Curved aromatics seem to form fullerenes and then ribbons and net-negative structures (Abrahamson, Joseph, et al. "Trajectories of graphitizable anthracene coke and non-graphitizable sucrose char during the earliest stages of annealing by rapid CO2 laser heating." C 4.2 (2018): 36; Jake's papers).
-
-
-
+%%%%%%%%%%%%%% Other notes to perhaps include %%%%%%%%%%%%%
 Pi-pi interactions play a pivotal role in so many super important processes (the way proteins fold and drugs bind to targets, crystal packing and charge transport properties in organic electronics, materials) - see references “Pi-pi Stacking of Curved Carbon Networks: The Corannulene Dimer” in Mendeley
 
-
-%in this work...
-We will address these questions in this work by studying nanoparticle systems containing cPAHs, first in homogeneous clusters containing one molecule type only, then extending this to heterogeneous clusters to understand the interactions and effect of cPAH size and ratio. Finally, exploratory work on systems containing cation(s) and fPAHs is presented.
+Relevance to carbon (quantum) dots?
 
 
 

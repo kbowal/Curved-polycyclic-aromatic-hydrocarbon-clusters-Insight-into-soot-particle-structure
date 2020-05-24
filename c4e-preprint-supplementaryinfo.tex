@@ -9,12 +9,12 @@
 \label{supplinfo}
 
 
-\subsection{Potentials}
-isoPAHAP tables?
-curPAHIP tables?
+\subsection{Intermolecular potentials}
+- include isoPAHAP tables?
+- include curPAHIP tables?
 
-The atomic coordinates and charges of the minimised 2pent15ring monomer.
-Probably should also include the same for corannulene (can pull from CST paper).
+- Include the atomic coordinates and charges of the minimised 2pent15ring monomer.
+- Probably should also include the same for corannulene (can pull from CST paper).
 
 \subsection{Calculation of radial distances and coordination numbers}
 \label{secSI:raddist_CN_eqns}
@@ -143,39 +143,36 @@ two\_100 & 0.45 & 0.45 & 0.48 & 0.52 \\ \hline
 \end{figure}
 %
 
-\subsection{Radial distances}
-Table \ref{tableSI:radialdistances} presents the average equilibrium radial distances for all clusters.  For the homogeneous cases, the two molecule types show similar equilibrium radial distances according to the cluster diameter.  However, in all clusters containing two molecule types the smaller corannulene molecules possess larger radial distances than the larger 2pent15ring molecule.  This is indicative of a core-shell structure in which the larger molecules reside in the cluster core, just as seen in the fPAH clusters \cite{bowal2018partitioning}.
-
-The addition of the potassium cation(s) also result in significant decreases in the radial distances for both molecule types.
-
-
+% \subsection{Radial distances}
+% Table \ref{tableSI:radialdistances} presents the average equilibrium radial distances for all clusters.  For the homogeneous cases, the two molecule types show similar equilibrium radial distances according to the cluster diameter.  However, in all clusters containing two molecule types the smaller corannulene molecules possess larger radial distances than the larger 2pent15ring molecule.  This is indicative of a core-shell structure in which the larger molecules reside in the cluster core, just as seen in the fPAH clusters \cite{bowal2018partitioning}.
+% The addition of the potassium cation(s) also result in significant decreases in the radial distances for both molecule types.
 %
-\begin{table}[]
-\centering
-\caption{Equilibrium radial distance, in nm, for all clusters studied}
-\begin{tabular}{lcc}
-\hline
-\multicolumn{1}{l}{\multirow{2}{*}{Cluster}} & \multicolumn{2}{c}{Radial distance} \\ 
-\multicolumn{1}{c}{} & \multicolumn{1}{c}{corannulene} & \multicolumn{1}{c}{2pent15ring} \\ \hline
-ann\_25 & \multicolumn{1}{c}{0.86} & -- \\
-ann\_40 & \multicolumn{1}{c}{1.04} & -- \\
-ann\_50 & \multicolumn{1}{c}{1.11} & -- \\
-ann\_100 & \multicolumn{1}{c}{1.42} & -- \\
-ann\_200 & \multicolumn{1}{c}{1.80} & -- \\ \hline
-two\_25 & \multicolumn{1}{c}{--} & 1.21 \\
-two\_40 & \multicolumn{1}{c}{--} & 1.37 \\
-two\_50 & \multicolumn{1}{c}{--} & 1.40 \\
-two\_100 & \multicolumn{1}{c}{--} & 1.85 \\ \hline
-two\_20\_ann\_20 & \multicolumn{1}{c}{1.28} & 1.14 \\
-two\_50\_ann\_50 & \multicolumn{1}{c}{1.83} & 1.50 \\
-two\_10\_ann\_30 & \multicolumn{1}{c}{1.18} & 0.96 \\
-two\_30\_ann\_10 & \multicolumn{1}{c}{1.50} & 1.25 \\ \hline
-two\_40\_K\_1 & \multicolumn{1}{c}{--} & 1.32 \\
-ann\_40\_K\_1 & \multicolumn{1}{c}{1.02} & -- \\
-ann\_40\_K\_2 & \multicolumn{1}{c}{1.01} & -- \\ \hline
-\end{tabular}
-\label{tableSI:radialdistances}
-\end{table}
+% \begin{table}[]
+% \centering
+% \caption{Equilibrium radial distance, in nm, for all clusters studied}
+% \begin{tabular}{lcc}
+% \hline
+% \multicolumn{1}{l}{\multirow{2}{*}{Cluster}} & \multicolumn{2}{c}{Radial distance} \\ 
+% \multicolumn{1}{c}{} & \multicolumn{1}{c}{corannulene} & \multicolumn{1}{c}{2pent15ring} \\ \hline
+% ann\_25 & \multicolumn{1}{c}{0.86} & -- \\
+% ann\_40 & \multicolumn{1}{c}{1.04} & -- \\
+% ann\_50 & \multicolumn{1}{c}{1.11} & -- \\
+% ann\_100 & \multicolumn{1}{c}{1.42} & -- \\
+% ann\_200 & \multicolumn{1}{c}{1.80} & -- \\ \hline
+% two\_25 & \multicolumn{1}{c}{--} & 1.21 \\
+% two\_40 & \multicolumn{1}{c}{--} & 1.37 \\
+% two\_50 & \multicolumn{1}{c}{--} & 1.40 \\
+% two\_100 & \multicolumn{1}{c}{--} & 1.85 \\ \hline
+% two\_20\_ann\_20 & \multicolumn{1}{c}{1.28} & 1.14 \\
+% two\_50\_ann\_50 & \multicolumn{1}{c}{1.83} & 1.50 \\
+% two\_10\_ann\_30 & \multicolumn{1}{c}{1.18} & 0.96 \\
+% two\_30\_ann\_10 & \multicolumn{1}{c}{1.50} & 1.25 \\ \hline
+% two\_40\_K\_1 & \multicolumn{1}{c}{--} & 1.32 \\
+% ann\_40\_K\_1 & \multicolumn{1}{c}{1.02} & -- \\
+% ann\_40\_K\_2 & \multicolumn{1}{c}{1.01} & -- \\ \hline
+% \end{tabular}
+% \label{tableSI:radialdistances}
+% \end{table}
 %
 
 Figure \ref{figSI:radialdists_molec} shows the average molecular radial distances for molecule types within clusters. Note that the histograms corresponding to the fPAH clusters ((e) and (f)) are smoothed since these results were taken from an REMD simulation instead of a post-REMD MD simulation at a single temperature.

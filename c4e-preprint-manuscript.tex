@@ -10,6 +10,9 @@
 Curved carbons are found in many materials including porous carbons (ref), glassy carbons (ref), and soot particles (ref).
 % curvature (ie defects) integrated easily in (production) processes
 % Mesophase pitch is used to produce many materials, including synthetic graphite.
+% Mesophase: formation of columns of curved molecules is important!  
+% Alignment of liquid crystals gives it its electronic properties 
+
 For example, high resolution transmission electron microscopy analysis of coals and cokes show that a significant proportion (28-49\%) of the constituent molecules are curved \cite{wang2017improved,zhong2018structural}. %(with a structure corresponding to centrally located pentagonal rings in aromatic structures)  % also curvature: 10.1021/acs.energyfuels.5b02907
 
 
@@ -28,6 +31,10 @@ In addition to providing the understanding required to optimise the nanostructur
 
 Carbon materials have been fabricated for use as adsorbents, carriers, catalyst supports, electrodes, and other advanced applications (refs).  The performance of these materials can be directly improved/tuned for these applications by adjusting their physical properties - in particular their nanostructures.  It is therefore crucial to develop a detailed understanding of the molecular interactions involved to enhance the prediction and design of desired carbon nanostructures.
 
+Flame-formed carbon nanoparticles show quantum dot behaviour (10.1073/pnas.1900205116) (not yet known how PAH structure and size, cluster structure, etc influence these properties).
+
+- corannulene packed into a simulation box used as model for microporous activated carbon (10.1177/0263617415619535, 10.1016/j.micromeso.2020.110220) 
+
 
 %% curved carbon applications...
 %Curved carbons have great promise in many applications such as understanding particulates, novel nanocarbon materials, sensors
@@ -37,9 +44,11 @@ Carbon materials have been fabricated for use as adsorbents, carriers, catalyst 
 %Nanoparticle formation: soot, carbon blacks, atmosphere
 %Applications: Lithium ion batteries, electronics, fuel cells
 
+%Important that molecules stack to produce graphitising material
 
 %% Previous work looking at cPAH interactions:	Homogeneous dimers
-Previous work on polycyclic aromatic hydrocarbons (PAHs) has focused on flat/planar PAHs (fPAHs), with less attention given to curved PAHs (cPAHs). However, electronic structure calculations show that there is significant energy in interactions between nested concave-to-convex homogeneous cPAH dimers, showing that curvature does not prevent dimers from forming pi-pi stacked assemblies similar to planar systems (10.1002/qua.21794, 10.1002/jcc.25084). As with fPAHs, cPAH dimer interactions are dominated by $\pi$-$\pi$ interactions compared to CH-$\pi$ interactions. However cPAHs in the concave-convex dimer configuration show different behaviour than fPAH dimers and cPAHs in convex-convex configuration, with the eclipsed dimer (in which the aromatic planes are aligned) showing a higher stability than the staggered dimer (in which the aromatic planes are shifted relative to each other) (10.1016/j.cplett.2011.07.030, 10.1002/jcc.25084).
+Previous work on the structure and properties of polycyclic aromatic hydrocarbons (PAHs) has focused on those that are flat/planar (fPAHs) \cite{Grancic2016,chen2014size} %(add non-CoMo refs!)
+, with less attention given to curved PAHs (cPAHs). However, electronic structure calculations show that there is significant energy in interactions between nested concave-to-convex homogeneous cPAH dimers, showing that curvature does not prevent dimers from forming pi-pi stacked assemblies similar to planar systems (10.1002/qua.21794, 10.1002/jcc.25084). As with fPAHs, cPAH dimer interactions are dominated by $\pi$-$\pi$ interactions compared to CH-$\pi$ interactions. However cPAHs in the concave-convex dimer configuration show different behaviour than fPAH dimers and cPAHs in convex-convex configuration, with the eclipsed dimer (in which the aromatic planes are aligned) showing a higher stability than the staggered dimer (in which the aromatic planes are shifted relative to each other) (10.1016/j.cplett.2011.07.030, 10.1002/jcc.25084).
 Dispersion provides the dominant energy contribution, although electrostatics are also significant especially in contrast to fPAH dimers (10.1002/jcc.25084, 10.1016/j.cplett.2011.07.030). 
 %Pi-pi > pi-CH interactions, eclipsed > staggered.
 
@@ -63,6 +72,10 @@ To date, detailed studies of cPAHs have primarily included static DFT calculatio
 % need to do a better job at splitting ideas: increased electrostatics and interactions with ions vs different structure and bowl complementarity
 Computational studies of fPAHs show that, unlike cPAHs, heterogeneous dimers are significantly weaker than their homogeneous counterparts (ref). This heterogeneity was shown to decrease the stability of a nanoparticle containing different molecule sizes and lead to a distinct partitioning in which the larger molecules formed the cluster core and the smaller molecules resided in the outer shell \cite{bowal2018partitioning}. Dynamic interactions of cPAHs or fPAHs with cations also highlighted the ability of cPAHs to engage in electrostatic interactions that stabilise a cPAH cluster, while fPAHs cannot \cite{bowal2019ion}. These results suggests that the fundamental interaction differences between fPAHs and cPAHs may cause different clustering and packing behaviours. Preliminary work suggests that the nanostructure of homogeneous cPAH clusters is significantly different from similar-sized fPAH clusters \cite{bowal2019ion}, and perhaps different molecule sizes will show increased packing and stability due to bowl complementarity.
 % This may be more representative of the experimentally observed structure of nascent soot particles.
+
+- Include paper on functionalising corannulene to get stacks
+
+Molecular models studying bulk systems found that curved PAHs demonstrate a higher adsorption capacity compared to systems containing both cPAHs and fPAHs and especially homogeneous fPAH systems, likely due to their higher porosity \cite{zhang2020molecular}.
 
 %So expect homogeneous corannulene nanocluster to be disordered, homo 2pent15ring cluster to have stacks. Expect mixed cPAH cluster to be dominated by 2pent15rings but enhanced corannulene stacking and more stable than comparable mixed fPAH cluster.
 % cPAH interactions with different sized molecules (no heteroatoms) (refs????). Increased stability compared to heterogeneous fPAH systems because of shape fitting and enhanced electrostatics and CH-pi interactions (?).
@@ -100,8 +113,10 @@ We will address these questions in this work by studying nanoparticle systems co
 
 \section{Methods}
 %% systems 
-Clusters studied: homogeneous (corannulene, 2pent15ring each: 25, 40, 50, 100, [200]), heterogeneous (20/20, 10/30, 30/10, 50/50).
-40 corannulene with 1 K+ and 2 K+.
+To thoroughly evaluate the influence of particle size, molecule size, molecule ratio, and ion interactions, 16 different clusters are evaluated. Homogeneous clusters containing 25, 50, 100, and 200 corannulene molecules and clusters containing 25, 50, and 100 2pent15ring molecules provide information on cluster and molecule size effects. 
+A series of clusters each containing 40 molecules of different sizes and proportions allows evaluation of heterogeneity effects. Heterogeneous clusters containing corannulene molecules and 2pent15ring molecules in proportions of 100\%:0\%, 75\%:25\%, 50\%:50\%, 25\%:75\%, and 0\%:100\%. In addition corannulene clusters containing one or two potassium ions and 2pent15ring cluster containing one potassium ion. 
+Finally, a heterogeneous cluster containing 50 corannulene and 50 2pent15ring molecules addresses heterogeneous cluster size effects.
+%Clusters studied: homogeneous (corannulene, 2pent15ring each: 25, 40, 50, 100, [200]), heterogeneous (20/20, 10/30, 30/10, 50/50). 40 corannulene with 1 K+ and 2 K+.
 
 The notation $\text{A}_{\text{x}}\text{B}_{\text{y}}$ is used to describe the clusters studied, where A and B refer to the corannulene and 2pent15ring molecule types, respectively, and x and y give the number of molecules in each cluster. For example, $\text{A}_{\text{50}}\text{B}_{\text{50}}$ indicates a cluster containing 100 molecules, made up of 50 corannulene and 50 2pent15ring molecules.  
 
@@ -136,6 +151,7 @@ These metrics were assessed and represent the corannulene crystal structure well
 
 % coordination numbers
 A quantitative measure of the degree of stacking order in the molecular structure is provided through the use of coordination numbers. These are calculated as the number of near neighbours within a cut-off radius $R$ of each molecule, averaged over each molecule type. 
+% maybe rephrase cut-off radius as range for the coordination shells (as used in 10.1021/ja909084e)
 For calculations of the coordination numbers, the values of $R$ were selected to include sandwich-type stacked interactions between molecules but exclude molecules more than one layer away. (This means that the equilibrium dimer distances served as the minimum $R$ values for each molecule type). For corannulene molecules this cut-off distance, $R_{\text{ANN}}$, is 0.4 nm, and for 2pent15ring molecules $R_{\text{two}}$ is 0.5 nm.  
 %Molecules are considered neighbouring if their centres of mass are within the cut-off distance for at least half of the 500 ps analysed simulation.
 The sensitivity of these cut-off values on calculated cluster properties is discussed in the Supplementary Information.
@@ -153,7 +169,7 @@ Molecular alignment angles are calculated to provide information on the configur
 \begin{figure}[!tbh]
 \centering
 \includegraphics[width=0.25\linewidth]{Figures/alignment_angle_schematic.eps}
-\caption{Schematic illustrating the calculation of the alignment angle between two neighbouring corannulene molecules. The central pentagonal rings are highlighted in red and the alignment angle ($\varphi$) is $30^{\circ}$.}
+\caption{Schematic illustrating the calculation of the alignment angle between two neighbouring corannulene molecules. The central pentagonal rings are highlighted in red and the alignment angle ($\varphi$) is $30^{\circ}$. \textbf{Add this to alignment angles histogram figure?}}
 \label{fig:alignmentangle_schematic}
 \end{figure}
  
@@ -184,9 +200,8 @@ angle between the two molecules in the minimum energy configuration than the DFT
 In all cases, the isoPAHAP potential significantly underestimates the binding energy and overestimates the equilibrium dimer distance since it does not include the enhanced electrostatics and dispersion due to the flexoelectric effect.
 % Overall some slight differences compared to DFT results show repulsive component of curPAHIP is shifted to smaller distances (means that there might be stronger attractions at small dimer separation distances) and minimum is slightly lower energy (provides conservative case if any different (less likely to bond))
 % The difference between the DFT and curPAHIP energies can be partly explained by the fact that the MD minimised monomers (used in curPAHIP assessment) are more curved than the DFT monomers. So perhaps the energies are not as low for the curPAHIP potential since the dimers are not able to reach the same small distance values without steric hindrance and repulsion coming into effect.
-%
-% need to add (a), (b), etc to plot
-% Fix this plot!!! x axis should be in Angstrom - or better change to be 0.2, 0.4, etc!!!
+% but it is the form of the repulsive forcefield and overall energy that are the important part (Laura’s paper) - address repulsive form not great in Fig 2 (c)
+
 \begin{figure}[!tbh]
 \centering
 \includegraphics[width=1\linewidth]{Figures/potentialDFT_curves.eps}
@@ -211,7 +226,7 @@ Upon initial observation of the cluster snapshots in Figure \ref{fig:clustersnap
 \begin{figure}[!tbh]
 \centering
 \includegraphics[width=0.9\linewidth]{Figures/cluster_snapshots.eps}
-\caption{Snapshots of clusters containing corannulene molecules (A), 2pent15ring molecules (B), and/or potassium cations (K).}
+\caption{Snapshots of clusters containing corannulene molecules (A), 2pent15ring molecules (B), and/or potassium cations (K). \textbf{Make labels larger, decrease white space.}}
 \label{fig:clustersnapshots}
 \end{figure}
 %
@@ -318,6 +333,8 @@ The CN value results for ion-containing clusters complement the intermolecular s
 \end{figure}
 %
 
+% include? "We find that the nearest neighbour coordination shells contain approximately XX molecules."
+
 %Further applications: Understanding the stacking behaviour of curved PAHs is relevant to materials studies / supramolecular chemistry / crystalline organic materials because of their unique optical and conduction properties; and can also lead to using these molecules as building blocks for engineering organic crystals with desired properties.  Synthesis of curved PAH hybrids has shown that the $\pi-\pi$ interactions of these curved species can result in tight stacking in 1D columns (10.1021/acs.cgd.7b01258).
 % relevant to polymers of intrinsic microporosity, graphene systems, graphene quantum dots (experimental condensation structure)
 
@@ -350,6 +367,8 @@ The radial position of the ion(s) within the cluster does not correspond to a cl
 
 Therefore, although the presence of an ion(s) causes more cPAH molecules to order around the cluster centre, this does effect seems to be very local and the total cluster shape/size is not changed.  (The ion(s) only influence a single shell of molecules and this has only an indirect effect on the rest of the molecules?)
 The addition of a second K ion into the corannulene cluster increases this effect - radial distance is decreased by 5\% with one K ion and a further 7\% with a second K ion. This suggests that the cation influence is additive, although further work needs to be done to assess when this trend reaches a saturation level (maximum effect) or in perhaps has cancelling or negative effects.
+
+- Soot structures seen experimentally do not form through self-assembly
 
 
 \subsection{Alignment angles}
@@ -388,6 +407,8 @@ The alignment angle distribution broadens for the 2pent15ring system with the ad
 The corannulene clusters containing K+ are also different than the homogeneous case, with a broadening/splitting of the 45 deg peak, increase in the 120 deg (confirm) peak, and disappearance of high (around 170 deg) angles. This shows that the addition of a cation disrupts the stacked structure seen in all other clusters containing 2pent15ring molecules. This can also be seen in the cluster snapshots in Figure XX(x)-(x), where the molecules are clustered with their electron-rich convex surfaces facing the cation but a lack of clear structure beyond this first layer of molecules surrounding the cation.
 The addition of cation(s) show XXXXX alignment angle distribution that indicates the loss of regular local structure.
 % It is interesting to note that the number of neighbouring molecules within the cut-off distance decreased for 2pent15ring molecule systems with the addition of a potassium cation. (this is seen in comparing cut-off distances behaviour) - is this still true after recalculating?
+
+% multidimensional analysis shows that the local orientational order of the corannulene molecules are more complex than those of 2pent15ring.  At smaller separation/cut-off distance (< XX nm), the favoured nearest neighbour geometry is XXX (like 45deg angled? vs stacked) while at larger distances (> XX nm) it is XXX (like 90deg??).
 
 
 \subsection{Surface properties}
@@ -428,6 +449,8 @@ An additional exploration into the influence of heterogeneity with cations was c
 %include radial distance histograms with high temperature insets?
 
 These results provide a first detailed exploration of the nanostructure of clusters containing cPAHs and cation(s), and further work should examine the influence of ion type (cation vs anion), size, and number.
+
+- include discussion/comparison to results of solvation shells of fPAHs around ion(s) - from \cite{bowal2019ion} and 10.1039/c9cp02658d.
 
 
 \section{Conclusions}

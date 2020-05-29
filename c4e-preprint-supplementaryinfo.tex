@@ -10,11 +10,199 @@
 
 
 \subsection{Intermolecular potentials}
-- include isoPAHAP tables?
-- include curPAHIP tables?
+\label{sec:SIpotentials}
 
-- Include the atomic coordinates and charges of the minimised 2pent15ring monomer.
-- Probably should also include the same for corannulene (can pull from CST paper).
+The isoPAHAP and curPAHIP potentials take the following form, 
+%
+\begin{equation}
+\label{eqn:isoPAHAP}
+U_{ab} = K \exp \left[ - \alpha_{ab} \left( R_{ab} - \rho_{ab} \right) \right] - \left[ 1 - \exp \left( - \beta R_{ab} \right) \sum_{k=0}^{6} \frac{ \left( \beta R_{ab} \right) ^{k}}{k!} \right] \frac{C_{6,ab}}{R_{ab}^{6}} + \frac{q_{a} q_{b}}{R_{ab}},
+\end{equation}
+%
+where the first term is the short-range term in the Born--Mayer form, the second term is the dispersion term damped by the Tang-Toennies damping function \citep{Tang1984}, and the third is the point charge electrostatic term. $U$ denotes the interaction energy, $K$ sets the energy unit of this term and will be taken to be $0.001$ hartree in this work, $\alpha$ is the hardness parameter in the Born--Mayer term, $R_{ab}$ is the atom-atom separation where $a$ and $b$ denote atomic sites within a molecule, $\rho_{ab}$ is a shape parameter, $\beta$ is the damping coefficient, $C_{6,ab}$ is a dispersion coefficient, and $q$ is the atomic point charge. Further details about the parametrisation and form of the isoPAHAP potential can be found in \citet{totton2010first}.
+
+Table~\ref{table:curPAHAPparams} provides the parameters of the curPAHIP intermolecular potential. 
+%
+\begin{table}[h!tb]
+\centering
+\caption{Parameters of curPAHIP in a.u.}
+\label{table:curPAHAPparams}
+\begin{tabular}{cccc}
+\hline
+Atom pair & $\rho $   & $\alpha$ 	&	$C_{6}$  \\ \hline
+C C       & 5.6563 & 1.8783 & 30.282  \\
+C H       & 4.9320 & 1.7560 & 12.604  \\
+H H       & 4.1187 & 1.4043 & 5.2179  \\ \hline
+$\beta = 1.50$ a.u.
+\end{tabular}
+\end{table}
+
+The following interaction parameters are used to describe systems containing \ce{K+}: $\sigma = 9.64$ and $\epsilon = 3.43\times10^{-8}$ a.u. Further information on the development and parameters of the curPAHIP potential can be found in \citet{bowal2019ion}.
+
+
+\subsection{Molecule descriptions}
+\label{sec:SImoleculedesc}
+Corannulene geometry (x, y, z in nm) and charges, taken from \citet{bowal2019ion}, are provided below.
+%
+\begin{verbatim}
+35 
+CORANNULENE with curPAHIP charges
+C     0.103   0.064   0.085    0.020  
+C     0.093  -0.078   0.085    0.020  
+C    -0.045  -0.112   0.085    0.020  
+C    -0.121   0.008   0.085    0.020  
+C    -0.030   0.117   0.085    0.020  
+C     0.205   0.129   0.022    0.177  
+C     0.310   0.049  -0.032   -0.201 
+C     0.300  -0.090  -0.032   -0.201 
+C     0.187  -0.156   0.022    0.177  
+C     0.143  -0.279  -0.032   -0.201 
+C     0.007  -0.313  -0.033   -0.201 
+C    -0.090  -0.225   0.022    0.177  
+C    -0.242   0.016   0.022    0.177  
+C    -0.296  -0.103  -0.032   -0.201 
+C    -0.222  -0.222  -0.032   -0.201 
+C    -0.280   0.142  -0.031   -0.201 
+C    -0.190   0.250  -0.031   -0.201 
+C    -0.059   0.235   0.023    0.177  
+C     0.049   0.310  -0.032   -0.201 
+C     0.178   0.258  -0.032   -0.201 
+H    -0.221   0.345  -0.072    0.133  
+H     0.031   0.408  -0.072    0.133  
+H     0.259   0.317  -0.073    0.133  
+H     0.398   0.097  -0.072    0.133  
+H     0.380  -0.149  -0.075    0.133  
+H     0.215  -0.348  -0.073    0.133  
+H    -0.024  -0.408  -0.074    0.133  
+H    -0.265  -0.312  -0.073    0.133  
+H    -0.396  -0.103  -0.074    0.133  
+H    -0.378   0.155  -0.073    0.133  
+X     0.103   0.064   0.132   -0.063 
+X     0.093  -0.078   0.132   -0.063 
+X    -0.045  -0.113   0.132   -0.063 
+X    -0.121   0.008   0.133   -0.063 
+X    -0.030   0.117   0.133   -0.063
+\end{verbatim}
+
+The following atomic coordinates (in nm) and charges are used in this work for the \ce{C42H14} molecule.
+%
+\begin{verbatim}
+66
+2PENT15RING MOLECULE with curPAHIP charges
+C    -0.200   0.000   0.135   -0.309
+C    -0.317   0.000   0.043    0.425
+C    -0.365  -0.132  -0.016   -0.126
+C    -0.126  -0.124   0.159    0.041
+C    -0.126   0.124   0.158    0.041
+C     0.014   0.124   0.176    0.070
+C     0.093   0.000   0.174   -0.190
+C     0.014  -0.125   0.177    0.070
+C     0.065  -0.244   0.122   -0.117
+C    -0.486  -0.127  -0.098   -0.225
+C    -0.543   0.000  -0.139    0.010
+C    -0.486   0.127  -0.096   -0.225
+C    -0.365   0.131  -0.016   -0.126
+C    -0.277   0.252  -0.001    0.253
+C    -0.162   0.242   0.091   -0.109
+C    -0.044   0.318   0.073    0.039
+C     0.065   0.244   0.122   -0.117
+C     0.197   0.251   0.059    0.008
+C     0.282   0.128   0.056    0.150
+C     0.229   0.000   0.111    0.038
+C    -0.029   0.421  -0.031    0.157
+C     0.110   0.463  -0.060   -0.365
+C     0.219   0.365  -0.036    0.346
+C    -0.154   0.458  -0.100   -0.163
+C    -0.275   0.373  -0.088   -0.210
+C     0.284  -0.130   0.058    0.150
+C     0.198  -0.252   0.060    0.008
+C     0.401   0.126  -0.034   -0.116
+C     0.347   0.366  -0.109   -0.392
+C     0.435   0.249  -0.107   -0.017
+C     0.220  -0.365  -0.036    0.346
+H    -0.526   0.219  -0.137    0.128
+H    -0.629   0.001  -0.205    0.090
+H     0.369   0.449  -0.175    0.162
+H     0.127   0.540  -0.134    0.161
+H    -0.153   0.535  -0.176    0.116
+H    -0.356   0.391  -0.157    0.133
+C     0.402  -0.128  -0.032   -0.116
+C     0.473   0.000  -0.054   -0.115
+C     0.352  -0.369  -0.100   -0.392
+C     0.437  -0.250  -0.105   -0.017
+C    -0.278  -0.253   0.001    0.253
+C    -0.162  -0.243   0.092   -0.109
+C    -0.044  -0.318   0.072    0.039
+C    -0.030  -0.418  -0.035    0.157
+C     0.109  -0.458  -0.067   -0.365
+C    -0.280  -0.378  -0.079   -0.210
+C    -0.156  -0.455  -0.103   -0.163
+H    -0.363  -0.398  -0.146    0.133
+H    -0.153  -0.525  -0.186    0.116
+H    -0.527  -0.218  -0.140    0.128
+H     0.126  -0.534  -0.142    0.161
+H     0.376  -0.453  -0.165    0.162
+H     0.520  -0.246  -0.173    0.104
+H     0.558  -0.001  -0.121    0.129
+H     0.523   0.248  -0.171    0.104
+X    -0.132   0.148   0.204    0.044
+X    -0.170   0.266   0.137   -0.107
+X    -0.051   0.340   0.119    0.041
+X     0.060   0.267   0.169   -0.115
+X     0.008   0.148   0.223    0.072
+X    -0.050  -0.341   0.118    0.041
+X    -0.169  -0.267   0.138   -0.107
+X    -0.132  -0.148   0.205    0.044
+X     0.060  -0.267   0.168   -0.115
+X     0.009  -0.148   0.223    0.072
+
+\end{verbatim}
+
+In both molecules, the element X represents the virtual mass-less atoms used to describe the flexoelectric effect, which are held above and parallel to the pentagon ring using intramolecular forces.
+
+\subsection{Replica Exchange Molecular Dynamics simulation parameters}
+\label{secSI:REMDtemps}
+%
+Replica temperatures for REMD simulations were selected using an exponential temperature distribution
+\begin{equation}
+\label{eqn:replica_temp_dist}
+T_{w} = T_{0}\exp(qw)
+\end{equation}
+where $T_w$ refers to the temperature (in K) at replica $w$, $T_0$ is the temperature (K) at replica $0$, and $q$ is a parameter which achieves the desired temperature range. 
+
+The temperature ranges are selected to encompass both solid- and liquid-like configurations. These temperature ranges differ with the molecular composition of the cluster, since constituent molecule sizes determine the temperature at which a cluster is liquid- or solid-like. The smallest molecule present determines the lower temperature bound, with A or C molecules at 200 K and B molecules at 400 K. Similarly the largest molecule present determines the upper temperature bound, with A or C molecules at $\ge 800$ K and B molecules at $\ge 1600$ K. 
+
+The $w$ and $q$ parameters, shown in Table~\ref{tableSI:REMDparams}, are selected for each cluster system to allow satisfactory exchange between replicas (discussed further below) using these temperature ranges.
+%
+\begin{table}[ht]
+\centering
+\caption{Replica temperature selection parameters %and resulting average exchange acceptance values 
+for cPAH clusters considered in this work.}
+\label{tableSI:REMDparams}
+\begin{tabular}{lcc}%c}
+\hline
+Cluster & $q$ & $w$ \\ \hline %& Acceptance 
+$\text{A}_{\text{25}}$ & 0.054 & 0-26 \\ %& 0.28-0.30
+$\text{A}_{\text{40}}$ & 0.050 & 0-29 \\ % & 0.19-0.24 
+$\text{A}_{\text{50}}$ & 0.040 & 0-35 \\ % & 0.24-0.28 
+$\text{A}_{\text{100}}$ & 0.025 & 0-59 \\ % & 0.28-0.35 
+$\text{A}_{\text{200}}$ & 0.017 & 0-86 \\ \hline % & 0.30-0.37
+$\text{B}_{\text{25}}$ & 0.045 & 0-32 \\ % & 0.20-0.26 
+$\text{B}_{\text{40}}$ & 0.032 & 0-44 \\ % & 0.13-0.41 
+$\text{B}_{\text{50}}$ & 0.030 & 0-47 \\ % & 0.22-0.28 
+$\text{B}_{\text{100}}$ & 0.024 & 0-59 \\ \hline % & 0.10-0.25 
+$\text{A}_{\text{20}}\text{B}_{\text{20}}$ & 0.030 & 0-71 \\ % & 0.35-0.42 
+$\text{A}_{\text{50}}\text{B}_{\text{50}}$ & 0.025 & 0-83 \\ % & 0.20-0.30 
+$\text{A}_{\text{30}}\text{B}_{\text{10}}$ & 0.036 & 0-59 \\ % & 0.30-0.38 
+$\text{A}_{\text{10}}\text{B}_{\text{30}}$ & 0.028 & 0-74 \\ \hline % & 0.33-0.41 
+$\text{B}_{\text{40}}\text{K}_{\text{1}}$ & 0.030 & 0-47 \\ % & 0.32-0.40 
+$\text{A}_{\text{40}}\text{K}_{\text{1}}$ & 0.050 & 0-29 \\ % & 0.21-0.23 
+$\text{A}_{\text{40}}\text{K}_{\text{2}}$ & 0.050 & 0-29 \\ \hline % & 0.21-0.23 
+\end{tabular}
+\end{table}
+%
+
+The effectiveness of an REMD simulation relies on the proper exchange of states between replicas so that the low temperature states are able to sample the high temperature configurations and vice versa. Replica exchange acceptance is a good indication of the movement between replicas and is a common indicator of simulation performance. Consistent acceptance values across indicate a good temperature selection for the system studied and an exchange acceptance of approximately $0.2$ is found empirically and theoretically to provide the best accuracy for a given computational time \cite{Rathore2005,Kone}. Exchange acceptances for simulations conducted in this work have an average between $0.20$ and $0.35$ with small system ranges, which indicates robust replica exchange with a good balance between equilibration within replicas and exchange between replicas. Replica exchange attempts are made every 100 fs, since frequent exchanges are shown to increase efficiency without affecting the ensemble being sampled \cite{sindhikara2008exchange,sindhikara2010exchange}.
 
 \subsection{Calculation of radial distances and coordination numbers}
 \label{secSI:raddist_CN_eqns}
@@ -35,35 +223,18 @@ $k \in \{\text{small}, \text{large}, \text{total}\}$ refers to the small curved 
 
 %\subsection{Position restraint negligibility at low temperature}
 
-\subsection{Simulation length equilibration check}
-Energies and radial distances don't change significantly when comparing eqm result from 3ns simulation (final 1ns) or 1ns simulation (final 500ps)
-Percent error of intermolecular energies are less than 0.2\%
-Percent error of radial distances are less than 3.5\%
-
-
+%\subsection{Simulation length equilibration check}
+%Energies and radial distances don't change significantly when comparing eqm result from 3ns simulation (final 1ns) or 1ns simulation (final 500ps)
+%Percent error of intermolecular energies are less than 0.2\%
+%Percent error of radial distances are less than 3.5\%
 
 \subsection{Corannulene crystal structure}
-In order to assess / benchmark the structural metrics used in this paper, they have been applied to the known crystal structure of a corannulene. %Further comparison is made with a 2pent15ring system and published large cPAH systems - Actually this should be included in the discussion sections of the paper I think.
+\label{secSI:corannulenecrystal}
+Several of the structural metrics used in this paper were applied to the known crystal structure of corannulene in order to provide a benchmark. 
+%Further comparison is made with a 2pent15ring system and published large cPAH systems - Actually this should be included in the discussion sections of the paper I think.
+As early as 1975, it was shown through X-ray analysis that corannulene crystallises in space group \textit{P}$2_{1}/c$ \cite{hanson1976crystal}.
 
-X-ray analysis of corannulene was conducted in 1975, and it was determined that the compound crystallises in space group \textit{P}$2_{1}/c$ \cite{hanson1976crystal}.
-
-A crystal structure containing 18 molecules, taken from The Cambridge Crystallographic Data Centre \cite{CORANN11unitcell}, provides an independent verification of the analysis used in this work as well as a known experimental structure useful for comparison.  The crystal density and intermolecular distances are provided in Table \ref{tableSI:crystal}.  Figure XX shows the crystal structure and alignment angles.
-
-\begin{table}[]
-\centering
-\caption{Molecular configuration metrics of corannulene crystal structure (collected from \cite{CORANN11unitcell}).}
-\label{table:crystal}
-\begin{tabular}{cc|cll}
-\multicolumn{2}{c}{Density (kg/m3)} & 1.36 \cite{CORANN11unitcell}&  &  \\ \cline{1-3}
-\multirow{3}{*}{Average intermolecular distance (nm)} & 1 molecule & 0.57 &  &  \\
- & 2 molecule & 0.72 &  &  \\
- & 3 molecule & 0.76 &  &  \\ \cline{1-3}
-\multirow{3}{*}{Intermolecular distances (nm)} & 1 molecule & 0.55 x 10, 0.61 x 6 &  &  \\
- & 2 molecules & 0.61 x 2, 0.72 x 10, 0.73 x 2, 0.76 x 2, 0.78 x 2 &  &  \\
- & 3 molecules & 0.72 x 2, 0.73 x 4, 0.76 x 8, 0.78 x 2, 0.82 x 2 &  & 
-\end{tabular}
-\end{table}
-%
+A crystal structure containing 18 molecules, taken from The Cambridge Crystallographic Data Centre \cite{CORANN11unitcell}, provides an independent verification of the analyses used in this work as well as a known experimental structure useful for comparison. The average intermolecular spacing values are 0.57 nm, 0.72 nm, and 0.76 nm consider 1, 2, and 3 neighbouring molecules, respectively. Figure~XX shows the crystal structure and alignment angles.
 %(using cut-off value of $R = 0.7$ nm)
 %Intermolecular distances: 0.55 nm x 10, 0.61 nm x 6 (for first molecule); 0.61 x 2, 0.72 x 10, 0.73 x 2, 0.76 x 2, 0.78 x 2 (for second molecule), 0.72 x 2, 0.73 x 4, 0.76 x 8, 0.78 x 2, 0.82 x 2 (third molecule)... NOT SURE HOW TO SHOW THESE -> FOLLOW SAME PATTERN USED IN HOW I DISCUSS THIS IN THE PAPER (AVERAGE INTERMOLECULAR DISTS? - WOULD BE 0.57 NM FOR FIRST MOLECULE, ETC)
 %
@@ -75,13 +246,15 @@ A crystal structure containing 18 molecules, taken from The Cambridge Crystallog
 \end{figure}
 %
 
+% add calculation of corannulene crystal structure CNs?
+
 \subsection{Cut-off distance sensitivities}
 The selection of the cut-off distance, $R$, influences the calculated average intermolecular distances, coordination numbers, and alignment angles.
 
 Due to the molecular arrangements of the homogeneous corannulene clusters (that is, sandwich-type stacking is not present), these results are the most sensitive to the selection of $R$.
 
 
-Figure \ref{figSI:alignmentangles_cutoffs} shows the alignment angle distributions for all homogeneous clusters using four different cut-off distances.  The influence of the cut-off distance is minimal in the 2pent15ring clusters, which show a very high proportion of molecules with at least one near neighbour at all cut-off distances.  At the higher cut-off distances, a second peak corresponding to further molecule layers (ie not the nearest neighbours alone) appears.  The corannulene clusters show relatively similar angle distributions across the cut-off distances, although the percent of molecules with a near neighbour increases dramatically between $R=0.5$ nm and $R=0.6$ nm.  
+Figure~\ref{figSI:alignmentangles_cutoffs} shows the alignment angle distributions for all homogeneous clusters using four different cut-off distances.  The influence of the cut-off distance is minimal in the 2pent15ring clusters, which show a very high proportion of molecules with at least one near neighbour at all cut-off distances.  At the higher cut-off distances, a second peak corresponding to further molecule layers (ie not the nearest neighbours alone) appears.  The corannulene clusters show relatively similar angle distributions across the cut-off distances, although the percent of molecules with a near neighbour increases dramatically between $R=0.5$ nm and $R=0.6$ nm.  
 %
 \begin{figure}[!tbh]
 \centering
@@ -96,7 +269,7 @@ Figure \ref{figSI:alignmentangles_cutoffs} shows the alignment angle distributio
 Note that for all systems, no neighbouring molecules are found using a cut-off distance of 0.4 nm or smaller.
 
 
-Table \ref{tableSI:intermolecdistscutoff} presents the average intermolecular distances of homogeneous clusters as a function of the cut-off distance used in analysis. For the corranulene molecule clusters, the cut-off distance selected influences the average intermolecular distance calculated.  Intuitively, an increase in the cut-off distance produces an increase in the average intermolecular distance, since the cut-off distance simply increases the range between 'neighbouring' molecules. At low cut-off values ($r = 0.5$ nm and $r = 0.6$ nm) very few molecule pairs exist and so these averages are not a clear picture of the true average intermolecular spacing throughout the cluster.  At $r = 0.7$ nm, the majority of molecules ($\ge 95$\%) have at least one near neighbour and therefore this provides the best indication of the cluster average.
+Table~\ref{tableSI:intermolecdistscutoff} presents the average intermolecular distances of homogeneous clusters as a function of the cut-off distance used in analysis. For the corranulene molecule clusters, the cut-off distance selected influences the average intermolecular distance calculated.  Intuitively, an increase in the cut-off distance produces an increase in the average intermolecular distance, since the cut-off distance simply increases the range between 'neighbouring' molecules. At low cut-off values ($r = 0.5$ nm and $r = 0.6$ nm) very few molecule pairs exist and so these averages are not a clear picture of the true average intermolecular spacing throughout the cluster.  At $r = 0.7$ nm, the majority of molecules ($\ge 95$\%) have at least one near neighbour and therefore this provides the best indication of the cluster average.
 % perhaps include the % of molecules that have a neighbour in each case?
 
 In contrast, the cut-off distance does not have a large impact on the average intermolecular spacing of homogeneous 2pent15ring molecules.  This highlights the highly stacked configuration of these molecules.
@@ -144,7 +317,7 @@ two\_100 & 0.45 & 0.45 & 0.48 & 0.52 \\ \hline
 %
 
 % \subsection{Radial distances}
-% Table \ref{tableSI:radialdistances} presents the average equilibrium radial distances for all clusters.  For the homogeneous cases, the two molecule types show similar equilibrium radial distances according to the cluster diameter.  However, in all clusters containing two molecule types the smaller corannulene molecules possess larger radial distances than the larger 2pent15ring molecule.  This is indicative of a core-shell structure in which the larger molecules reside in the cluster core, just as seen in the fPAH clusters \cite{bowal2018partitioning}.
+% Table~\ref{tableSI:radialdistances} presents the average equilibrium radial distances for all clusters.  For the homogeneous cases, the two molecule types show similar equilibrium radial distances according to the cluster diameter.  However, in all clusters containing two molecule types the smaller corannulene molecules possess larger radial distances than the larger 2pent15ring molecule.  This is indicative of a core-shell structure in which the larger molecules reside in the cluster core, just as seen in the fPAH clusters \cite{bowal2018partitioning}.
 % The addition of the potassium cation(s) also result in significant decreases in the radial distances for both molecule types.
 %
 % \begin{table}[]
@@ -175,7 +348,7 @@ two\_100 & 0.45 & 0.45 & 0.48 & 0.52 \\ \hline
 % \end{table}
 %
 
-Figure \ref{figSI:radialdists_molec} shows the average molecular radial distances for molecule types within clusters. Note that the histograms corresponding to the fPAH clusters ((e) and (f)) are smoothed since these results were taken from an REMD simulation instead of a post-REMD MD simulation at a single temperature.
+Figure~\ref{figSI:radialdists_molec} shows the average molecular radial distances for molecule types within clusters. Note that the histograms corresponding to the fPAH clusters ((e) and (f)) are smoothed since these results were taken from an REMD simulation instead of a post-REMD MD simulation at a single temperature.
 %
 \begin{figure}[!tbh]
 \centering

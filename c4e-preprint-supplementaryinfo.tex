@@ -42,7 +42,7 @@ The following interaction parameters are used to describe systems containing \ce
 
 \subsection{Molecule descriptions}
 \label{sec:SImoleculedesc}
-Corannulene geometry (x, y, z in nm) and charges, taken from \citet{bowal2019ion}, are provided below.
+Corannulene (A) geometry (x, y, z in nm) and charges, taken from \citet{bowal2019ion}, are provided below.
 %
 \begin{verbatim}
 35 
@@ -84,7 +84,7 @@ X    -0.121   0.008   0.133   -0.063
 X    -0.030   0.117   0.133   -0.063
 \end{verbatim}
 
-The following atomic coordinates (in nm) and charges are used in this work for the \ce{C42H14} molecule.
+The following atomic coordinates (in nm) and charges are used in this work for the \ce{C42H14} molecule (B).
 %
 \begin{verbatim}
 66
@@ -211,15 +211,14 @@ Average radial distances and coordination numbers are calculated to provide insi
 \begin{equation}
     r_{k} = \frac{1}{N_{k}}\sum_{m \in I_{k}}R_{m}
 \end{equation}
-where $N_{k}$ is the number of molecules within $k \in \{\text{small},\text{large}\}$, referring to the small and large curved molecule types, $I_{k}$ is the set of molecule indices within $k$, and $R_{m}$ is the radial distance between the cluster geometric centre and the geometric centre of molecule $m$.
+where $N_{k}$ is the number of molecules within $k \in \{\text{A},\text{B}\}$, referring to the corannulene and \ce{C42H14} molecule types, $I_{k}$ is the set of molecule indices within $k$, and $R_{m}$ is the radial distance between the cluster geometric centre and the geometric centre of molecule $m$.
 
 The coordination number of molecule type $k$, $CN_{k},$ provides the average number of molecules within a distance $R^{(\text{cutoff})}$. This is calculated as the average of the cumulative radial distribution function integrated over the centre of the cluster (set as the origin at 0) to a maximum cut-off radial distance, $R^{(\text{cutoff})}$:
 \begin{equation}
     CN_{k}(R^{(\text{cut-off})}) = \frac{1}{N_{k}} \sum_{m \in I_{k}} \int\limits_{0}^{R^{(\text{cut-off})}}  \sum_{j=1}^{N_{\text{total}}} \delta(D_{mj} - R) dR
 \end{equation}
-$k \in \{\text{small}, \text{large}, \text{total}\}$ refers to the small curved molecules, large curved molecules, and all curved molecules within the cluster, respectively. $D_{mj}$ is the distance between the geometric centres of molecules $m$ and $j$. $R^{(\text{cut-off})}$ corresponds to the radius of the molecule type of interest, so $R^{(\text{cut-off})}_{\text{PYR}} = 0.46$ nm, $R^{(\text{cut-off})}_{\text{COR}} = 0.47$ nm, $R^{(\text{cut-off})}_{\text{OVA}} = 0.59$ nm, and $R^{(\text{cut-off})}_{\text{CIR}} = 0.71$ nm. $CN_{\text{total}}$ values use the radius of the larger molecule in the system considered. These provide $CN$ values from zero to two, corresponding to an isolated molecule and a molecule sandwiched between two others, respectively.
-
-% rewrite above so that 'small' = corannulene, 'large' = 2pent15ring
+$k \in \{\text{A}, \text{B}, \text{total}\}$ refers to the A molecules, B molecules, and all curved molecules within the cluster, respectively. $D_{mj}$ is the distance between the geometric centres of molecules $m$ and $j$. 
+This provides $CN$ values from zero to two, corresponding to an isolated molecule and a molecule sandwiched between two others, respectively.
 
 %\subsection{Position restraint negligibility at low temperature}
 
@@ -232,9 +231,10 @@ $k \in \{\text{small}, \text{large}, \text{total}\}$ refers to the small curved 
 \label{secSI:corannulenecrystal}
 Several of the structural metrics used in this paper were applied to the known crystal structure of corannulene in order to provide a benchmark. 
 %Further comparison is made with a 2pent15ring system and published large cPAH systems - Actually this should be included in the discussion sections of the paper I think.
-As early as 1975, it was shown through X-ray analysis that corannulene crystallises in space group \textit{P}$2_{1}/c$ \cite{hanson1976crystal}.
+As early as 1975, it was shown through X-ray analysis that corannulene crystallises in a close-packed structure mostly stabilised through CH-$pi$ interactions, in space group \textit{P}$2_{1}/c$ \cite{hanson1976crystal}.
 
-A crystal structure containing 18 molecules, taken from The Cambridge Crystallographic Data Centre \cite{CORANN11unitcell}, provides an independent verification of the analyses used in this work as well as a known experimental structure useful for comparison. The average intermolecular spacing values are 0.57 nm, 0.72 nm, and 0.76 nm consider 1, 2, and 3 neighbouring molecules, respectively. Figure~XX shows the crystal structure and alignment angles.
+A crystal structure containing 18 molecules, taken from The Cambridge Crystallographic Data Centre \cite{CORANN11unitcell}, provides an independent verification of the analyses used in this work as well as a known experimental structure useful for comparison. The average intermolecular spacing values are 0.57 nm, 0.72 nm, and 0.76 nm consider 1, 2, and 3 neighbouring molecules, respectively. The individual distances between corannulene monomers within the crystal structure calculated in this analysis are in excellent agreement with those reported in \citet{sanyal2014functional}. Figure~XX shows the crystal structure and alignment angles examined in this work.
+
 %(using cut-off value of $R = 0.7$ nm)
 %Intermolecular distances: 0.55 nm x 10, 0.61 nm x 6 (for first molecule); 0.61 x 2, 0.72 x 10, 0.73 x 2, 0.76 x 2, 0.78 x 2 (for second molecule), 0.72 x 2, 0.73 x 4, 0.76 x 8, 0.78 x 2, 0.82 x 2 (third molecule)... NOT SURE HOW TO SHOW THESE -> FOLLOW SAME PATTERN USED IN HOW I DISCUSS THIS IN THE PAPER (AVERAGE INTERMOLECULAR DISTS? - WOULD BE 0.57 NM FOR FIRST MOLECULE, ETC)
 %
@@ -249,22 +249,23 @@ A crystal structure containing 18 molecules, taken from The Cambridge Crystallog
 % add calculation of corannulene crystal structure CNs?
 
 \subsection{Cut-off distance sensitivities}
+\label{secSI:cutoffs}
 The selection of the cut-off distance, $R$, influences the calculated average intermolecular distances, coordination numbers, and alignment angles.
 
-Due to the molecular arrangements of the homogeneous corannulene clusters (that is, sandwich-type stacking is not present), these results are the most sensitive to the selection of $R$.
+Due to the molecular arrangements of the homogeneous A clusters (that is, sandwich-type stacking is not present), these results are the most sensitive to the selection of $R$.
 
 
-Figure~\ref{figSI:alignmentangles_cutoffs} shows the alignment angle distributions for all homogeneous clusters using four different cut-off distances.  The influence of the cut-off distance is minimal in the 2pent15ring clusters, which show a very high proportion of molecules with at least one near neighbour at all cut-off distances.  At the higher cut-off distances, a second peak corresponding to further molecule layers (ie not the nearest neighbours alone) appears.  The corannulene clusters show relatively similar angle distributions across the cut-off distances, although the percent of molecules with a near neighbour increases dramatically between $R=0.5$ nm and $R=0.6$ nm.  
+Figure~\ref{figSI:alignmentangles_cutoffs} shows the alignment angle distributions for all homogeneous clusters using four different cut-off distances.  The influence of the cut-off distance is minimal in the B clusters, which show a very high proportion of molecules with at least one near neighbour at all cut-off distances.  At the higher cut-off distances, a second peak corresponding to further molecule layers (ie not the nearest neighbours alone) appears.  The A clusters show relatively similar angle distributions across the cut-off distances, although the percent of molecules with a near neighbour increases dramatically between $R=0.5$ nm and $R=0.6$ nm.  
 %
 \begin{figure}[!tbh]
 \centering
 \includegraphics[width=0.85\linewidth]{Figures/AlignmentAnglesCutoffAssessment_SI.eps}
-\caption{Alignment angle distributions at different cut-off distances, $R$, in nm for the following clusters: (a) ann\_25, (b) ann\_40, (c) ann\_50, (d) ann\_100, (e) ann\_200, (f) two\_25, (g) two\_40, (h) two\_50, (i) two\_100. Dashed lines correspond to the corannulene crystal structure (for (a)-(e)) and the minimised 2pent15ring dimer (for (f)-(i)). Percent values in the upper right hand corners of each angle distribution refer to the percent of molecules within the cluster that have at least one near neighbour.}
+\caption{Alignment angle distributions at different cut-off distances, $R$, in nm for the following clusters: (a) ann\_25, (b) ann\_40, (c) ann\_50, (d) ann\_100, (e) ann\_200, (f) two\_25, (g) two\_40, (h) two\_50, (i) two\_100. Dashed lines correspond to the A crystal structure (for (a)-(e)) and the minimised B dimer (for (f)-(i)). Percent values in the upper right hand corners of each angle distribution refer to the percent of molecules within the cluster that have at least one near neighbour.}
 \label{figSI:alignmentangles_cutoffs}
 \end{figure}
 %
 
-- Include figure of CN histograms with r=0.5 for corannulene and 2pent15ring
+- Include figure of CN histograms with r=0.5 for A and B
 
 Note that for all systems, no neighbouring molecules are found using a cut-off distance of 0.4 nm or smaller.
 
@@ -272,7 +273,7 @@ Note that for all systems, no neighbouring molecules are found using a cut-off d
 Table~\ref{tableSI:intermolecdistscutoff} presents the average intermolecular distances of homogeneous clusters as a function of the cut-off distance used in analysis. For the corranulene molecule clusters, the cut-off distance selected influences the average intermolecular distance calculated.  Intuitively, an increase in the cut-off distance produces an increase in the average intermolecular distance, since the cut-off distance simply increases the range between 'neighbouring' molecules. At low cut-off values ($r = 0.5$ nm and $r = 0.6$ nm) very few molecule pairs exist and so these averages are not a clear picture of the true average intermolecular spacing throughout the cluster.  At $r = 0.7$ nm, the majority of molecules ($\ge 95$\%) have at least one near neighbour and therefore this provides the best indication of the cluster average.
 % perhaps include the % of molecules that have a neighbour in each case?
 
-In contrast, the cut-off distance does not have a large impact on the average intermolecular spacing of homogeneous 2pent15ring molecules.  This highlights the highly stacked configuration of these molecules.
+In contrast, the cut-off distance does not have a large impact on the average intermolecular spacing of homogeneous B molecules. This highlights the highly stacked configuration of these molecules.
 
 
 
@@ -311,7 +312,7 @@ two\_100 & 0.45 & 0.45 & 0.48 & 0.52 \\ \hline
 \begin{figure}[!tbh]
 \centering
 \includegraphics[width=0.5\linewidth]{Figures/alignment_angle_hetero_SI_draft.png}
-\caption{Alignment angle distributions for homogeneous and heterogeneous 2pent15ring and corannulene clusters each containing 100 molecules.}
+\caption{Alignment angle distributions for homogeneous and heterogeneous A and B clusters each containing 100 molecules.}
 \label{figSI:alignmentangles_100}
 \end{figure}
 %

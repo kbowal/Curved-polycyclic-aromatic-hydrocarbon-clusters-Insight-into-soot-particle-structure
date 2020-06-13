@@ -211,7 +211,7 @@ Average radial distances and coordination numbers are calculated to provide insi
 \begin{equation}
     r_{k} = \frac{1}{N_{k}}\sum_{m \in I_{k}}R_{m}
 \end{equation}
-where $N_{k}$ is the number of molecules within $k \in \{\text{A},\text{B}\}$, referring to the corannulene and \ce{C42H14} molecule types, $I_{k}$ is the set of molecule indices within $k$, and $R_{m}$ is the radial distance between the cluster geometric centre and the geometric centre of molecule $m$.
+where $N_{k}$ is the number of molecules within $k \in \{\text{A},\text{B}\}$, referring to the corannulene and \ce{C42H14} molecule types, $I_{k}$ is the set of molecule indices within $k$, and $R_{m}$ is the radial distance between the cluster geometric centre and the geometric centre of molecule $m$. In this work, radial distances are calculated considering all atoms in the system.
 
 The coordination number of molecule type $k$, $CN_{k},$ provides the average number of molecules within a distance $R^{(\text{cutoff})}$. This is calculated as the average of the cumulative radial distribution function integrated over the centre of the cluster (set as the origin at 0) to a maximum cut-off radial distance, $R^{(\text{cutoff})}$:
 \begin{equation}
@@ -349,7 +349,7 @@ two\_100 & 0.45 & 0.45 & 0.48 & 0.52 \\ \hline
 % \end{table}
 %
 
-Figure~\ref{figSI:radialdists_molec} shows the average molecular radial distances for molecule types within clusters. Note that the histograms corresponding to the fPAH clusters ((e) and (f)) are smoothed since these results were taken from an REMD simulation instead of a post-REMD MD simulation at a single temperature.
+Figure~\ref{figSI:radialdists_molec} shows the average molecular radial distances for molecule types within clusters. Note that the histograms corresponding to the fPAH clusters [(e) and (f)] are smoothed since these results were taken from an REMD simulation instead of a post-REMD MD simulation at a single temperature.
 %
 \begin{figure}[!tbh]
 \centering

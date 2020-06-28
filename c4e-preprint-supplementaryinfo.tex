@@ -164,7 +164,6 @@ In both molecules, the element X represents the virtual mass-less atoms used to 
 \label{secSI:DFT}
 Density functional theory (DFT) calculations are used to determine the geometry of cPAH monomers and geometries and energies of cPAH dimers, to assess the atomic and intermolecular descriptions employed in this work. The B97-D functional \cite{grimme2006semiempirical}, a hybrid functional with an empirical dispersion correction, is used in this work. Geometry optimisations are carried at the B97-D/6-311G(d,p) level of theory with frequency calculations to ensure suitable minima are found, and subsequent single point calculations use B97-D/cc-pVTZ, with basis set superposition error corrections.  These functional and basis sets were selected since they provide good agreement (within 4\%) with benchmark CCSD(T) \cite{janowski2011convex} and SAPT(DFT) \cite{Cabaleiro-Lago2018} calculations of small cPAH molecules.
 
-
 \subsection{Replica Exchange Molecular Dynamics simulation parameters}
 \label{secSI:REMDtemps}
 %
@@ -238,14 +237,14 @@ Several of the structural metrics used in this paper were applied to the known c
 %Further comparison is made with a 2pent15ring system and published large cPAH systems - Actually this should be included in the discussion sections of the paper I think.
 As early as 1975, it was shown through X-ray analysis that corannulene crystallises in a close-packed structure mostly stabilised through CH-$pi$ interactions, in space group \textit{P}$2_{1}/c$ \cite{hanson1976crystal}.
 
-A crystal structure containing 18 molecules, taken from The Cambridge Crystallographic Data Centre \cite{CORANN11unitcell}, provides an independent verification of the analyses used in this work as well as a known experimental structure useful for comparison. The average intermolecular spacing values are 0.57 nm, 0.72 nm, and 0.76 nm consider 1, 2, and 3 neighbouring molecules, respectively. The individual distances between corannulene monomers within the crystal structure calculated in this analysis are in excellent agreement with those reported in \citet{sanyal2014functional}. Figure~XX shows the crystal structure and alignment angles examined in this work.
+A crystal structure containing 18 molecules from an X-ray data provided by \citet{Petrukhina2005} uploaded to the Cambridge Crystallographic Data Centre, provides an independent verification of the analyses used in this work as well as a known experimental structure useful for comparison. The average intermolecular spacing values are 0.57 nm, 0.72 nm, and 0.76 nm consider 1, 2, and 3 neighbouring molecules, respectively. The individual distances between corannulene monomers within the crystal structure calculated in this analysis are in excellent agreement with those reported in \citet{sanyal2014functional}. Figure~XX shows the crystal structure and alignment angles examined in this work.
 
 %(using cut-off value of $R = 0.7$ nm)
 %Intermolecular distances: 0.55 nm x 10, 0.61 nm x 6 (for first molecule); 0.61 x 2, 0.72 x 10, 0.73 x 2, 0.76 x 2, 0.78 x 2 (for second molecule), 0.72 x 2, 0.73 x 4, 0.76 x 8, 0.78 x 2, 0.82 x 2 (third molecule)... NOT SURE HOW TO SHOW THESE -> FOLLOW SAME PATTERN USED IN HOW I DISCUSS THIS IN THE PAPER (AVERAGE INTERMOLECULAR DISTS? - WOULD BE 0.57 NM FOR FIRST MOLECULE, ETC)
 %
 \begin{figure}[!tbh]
 \centering
-\includegraphics[width=0.65\linewidth]{Figures/corannulene_crystal.eps}
+\includegraphics[width=0.8\linewidth]{Figures/corannulene_crystal.eps}
 \caption{Snapshot of corannulene crystal structure (left) with alignment angle distribution (right).}
 \label{figSI:corannulene_crystal}
 \end{figure}
@@ -309,16 +308,33 @@ $\text{B}_{\text{100}}$ & 0.45 & 0.45 & 0.48 & 0.52 \\ \hline
 %
 
 
-
-
-
-\subsection{Alignment angles - 100 molecule systems}
+\subsection{Alignment angles - 100 molecule clusters}
 %
 \begin{figure}[!tbh]
 \centering
-\includegraphics[width=0.5\linewidth]{Figures/alignment_angles_heteroSI.eps}
+\includegraphics[width=0.8\linewidth]{Figures/alignment_angles_heteroSI.eps}
 \caption{Alignment angle distributions for homogeneous and heterogeneous A and B clusters each containing 100 molecules.}
 \label{figSI:alignmentangles_100}
+\end{figure}
+%
+
+\subsection{Alignment angles - fPAH clusters}
+%
+\begin{figure}[!tbh]
+\centering
+\includegraphics[width=0.7\linewidth]{Figures/alignment_angles_fPAHs.eps}
+\caption{Alignment angle distributions for homogeneous and heterogeneous fPAH clusters obtained from \citet{bowal2018partitioning}.}
+\label{figSI:alignmentangles_fPAHs}
+\end{figure}
+%
+
+\subsection{Alignment angles - $\text{A}_{\text{20}}\text{C}_{\text{20}}$}
+%
+\begin{figure}[!tbh]
+\centering
+\includegraphics[width=0.5\linewidth]{Figures/alignment_angles_ann20cor20.eps}
+\caption{Alignment angle distributions for the $\text{A}_{\text{20}}\text{C}_{\text{20}}$ cluster containing both cPAHs and fPAHs.}
+\label{figSI:alignmentangles_ann20cor20}
 \end{figure}
 %
 
@@ -354,14 +370,14 @@ $\text{B}_{\text{100}}$ & 0.45 & 0.45 & 0.48 & 0.52 \\ \hline
 % \end{table}
 %
 
-Figure~\ref{figSI:radialdists_molec} shows the average molecular radial distances for molecule types within clusters. Note that the histograms corresponding to the fPAH clusters [(e) and (f)] are smoothed since these results were taken from an REMD simulation instead of a post-REMD MD simulation at a single temperature.
+%Figure~\ref{figSI:radialdists_molec} shows the average molecular radial distances for molecule types within clusters. Note that the histograms corresponding to the fPAH clusters [(e) and (f)] are smoothed since these results were taken from an REMD simulation instead of a post-REMD MD simulation at a single temperature.
 %
-\begin{figure}[!tbh]
-\centering
-\includegraphics[width=0.5\linewidth]{Figures/molec_histograms.eps}
-\caption{Atomic radial distance histograms for (a) $\text{A}_{\text{20}}\text{B}_{\text{20}}$, (b) $\text{A}_{\text{50}}\text{B}_{\text{50}}$, (c) $\text{A}_{\text{30}}\text{B}_{\text{10}}$, (d) $\text{A}_{\text{10}}\text{B}_{\text{30}}$, and (e) $\text{C}_{\text{16}}\text{D}_{\text{16}}$.}
-\label{figSI:radialdists_molec}
-\end{figure}
+%\begin{figure}[!tbh]
+%\centering
+%\includegraphics[width=0.5\linewidth]{Figures/molec_histograms.eps}
+%\caption{Atomic radial distance histograms for (a) $\text{A}_{\text{20}}\text{B}_{\text{20}}$, (b) $\text{A}_{\text{50}}\text{B}_{\text{50}}$, (c) $\text{A}_{\text{30}}\text{B}_{\text{10}}$, (d) $\text{A}_{\text{10}}\text{B}_{\text{30}}$, and (e) $\text{C}_{\text{16}}\text{D}_{\text{16}}$.}
+%\label{figSI:radialdists_molec}
+%\end{figure}
 %
 
 \newpage
